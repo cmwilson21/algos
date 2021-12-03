@@ -92,3 +92,45 @@ const shuffle = function(nums, n) {
   }
   return ans;
 }
+
+
+// There are n kids with candies. You are given an integer array candies, where each candies[i] represents the number of candies the ith kid has, and an integer extraCandies, denoting the number of extra candies that you have.
+
+// Return a boolean array result of length n, where result[i] is true if, after giving the ith kid all the extraCandies, they will have the greatest number of candies among all the kids, or false otherwise.
+
+const kidsWithCandies = function(candies, extraCandies) {
+  let max = Math.max(...candies);
+  let result = [];
+  for (let i = 0; i < candies.length; i++) {
+    if (candies[i] + extraCandies >= max) {
+      result.push(true);
+    } else {
+      result.push(false);
+    }
+  }
+  return result;
+}
+
+const kidsWithCandies = function(candies, extraCandies) {
+  let max = Math.max(...candies);
+  return candies.map(candy => candy + extraCandies >= max);
+}
+
+
+// Given the array nums, for each nums[i] find out how many numbers in the array are smaller than it. That is, for each nums[i] you have to count the number of valid j's such that j != i and nums[j] < nums[i].
+
+// Return the answer in an array.
+
+const smallerNumbersThanCurrent = function(nums) {
+  let result = [];
+  for (let i = 0; i < nums.length; i++) {
+    let count = 0;
+    for (let j = 0; j < nums.length; j++) {
+      if (nums[j] < nums[i]) {
+        count++;
+      }
+    }
+    result.push(count);
+  }
+  return result;
+}
