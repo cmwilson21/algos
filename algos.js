@@ -134,3 +134,22 @@ const smallerNumbersThanCurrent = function(nums) {
   }
   return result;
 }
+
+const smallerNumbersThanCurrent = function(nums) {
+  return nums.map((num, i) => nums.filter(n => n < num).length);
+}
+
+// Given a string s and an integer array indices of the same length.
+
+// The string s will be shuffled such that the character at the ith position moves to indices[i] in the shuffled string.
+
+// Return the shuffled string.
+
+const restoreString = function(s, indices) {
+  let result = '';
+  for (let i = 0; i < indices.length; i++) {
+    result += s[indices[i]];
+  }
+  return result;
+}
+
