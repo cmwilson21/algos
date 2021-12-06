@@ -153,3 +153,15 @@ const restoreString = function(s, indices) {
   return result;
 }
 
+// Given an array arr of integers, check if there exists two integers N and M such that N is the double of M ( i.e. N = 2 * M).
+const checkIfExist = function(arr) {
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[i] === arr[j] * 2) {
+        result.push(arr[i]);
+      }
+    }
+  }
+  return result;
+}
