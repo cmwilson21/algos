@@ -224,3 +224,23 @@ const isAnagram = function(s, t) {
       return false
   }
 }
+
+
+// Given a pattern and a string s, find if s follows the same pattern.
+// const wordPattern = function(pattern, s) {
+//   let string = s.split(' ');
+//   let map = {};
+//   if (string.length !== pattern.length) {
+//     return false;
+//   }
+//   for (let i = 0; i < string.length; i++) {
+//     if (map[pattern[i]]) {
+//       if (map[pattern[i]] !== string[i]) {
+//         return false;
+//       }
+//     } else {
+//       map[pattern[i]] = string[i];
+//     }
+//   }
+//   return true;
+// }
