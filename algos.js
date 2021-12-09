@@ -213,3 +213,14 @@ const eval = function(operations) {
   }
   return x;
 }
+
+// Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+const isAnagram = function(s, t) {
+  let stringS = s.split('').sort().join();
+  let stringT = t.split('').sort().join();
+  if (stringS === stringT){
+      return true
+  } else {
+      return false
+  }
+}
